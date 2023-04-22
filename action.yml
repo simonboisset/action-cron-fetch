@@ -1,8 +1,11 @@
 name: 'Action cron fetch'
-description: 'Request api by url and token'
+description: 'Request api by url key and token'
 inputs:
   token:
     description: 'Auth token'
+    required: true
+  key:
+    description: 'Header key for auth token'
     required: true
   url:
     required: true

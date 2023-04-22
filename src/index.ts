@@ -5,13 +5,14 @@ const main = async () => {
   try {
     const token = core.getInput('token');
     const url = core.getInput('url');
+    const key = core.getInput('key');
     console.log(`Starting request to ${url}`);
 
     const response = await axios({
       method: 'post',
       maxBodyLength: Infinity,
       url,
-      headers: { 'x-cron-secret-key': token },
+      headers: { [key]: token },
     });
 
     const { data, status } = response;
