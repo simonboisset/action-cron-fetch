@@ -1,4 +1,4 @@
-name: 'Api request'
+name: 'Action cron fetch'
 description: 'Request api by url and token'
 inputs:
   token:
